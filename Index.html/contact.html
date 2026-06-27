@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Desk | ApexMarket</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Apex<span>Market</span></a>
+            <input type="checkbox" id="menu-checkbox">
+            <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="cart.html" class="nav-link">Cart</a>
+                <a href="checkout.html" class="nav-link">Checkout</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="info-container">
+        <h2 class="section-title">Support Communications</h2>
+        <div style="background:var(--bg-card); padding:2rem; border-radius:var(--radius-md); box-shadow:var(--shadow);">
+            <form action="#" method="POST" onsubmit="alert('Message Sent!'); return false;" class="form-grid">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" required placeholder="User String">
+                </div>
+                <div class="form-group">
+                    <label>Email Link Address</label>
+                    <input type="email" required placeholder="user@email.com">
+                </div>
+                <div class="form-group full-width">
+                    <label>Inquiry Content</label>
+                    <textarea rows="5" required style="width: 100%; border:1px solid var(--border); border-radius:var(--radius-sm); padding:0.75rem; font-family:inherit;" placeholder="Elaborate details..."></textarea>
+                </div>
+                <button type="submit" class="btn full-width">Dispatch Communications Message</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

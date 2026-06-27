@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | ApexMarket</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Apex<span>Market</span></a>
+            <input type="checkbox" id="menu-checkbox">
+            <label for="menu-checkbox" class="menu-toggle"><i class="fas fa-bars"></i></label>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="cart.html" class="nav-link active">Cart</a>
+                <a href="checkout.html" class="nav-link">Checkout</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="cart-container">
+        <section class="cart-items">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product Details</th>
+                        <th>Qty</th>
+                        <th>Unit Price</th>
+                        <th>Subtotal</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="cart-product">
+                                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=150&q=80" alt="Headphones">
+                                <div><h4>Quantum ANC Headphones</h4><small style="color:var(--text-muted)">Color: Space Gray</small></div>
+                            </div>
+                        </td>
+                        <td class="quantity-selector"><input type="number" value="1" min="1"></td>
+                        <td>$299.00</td>
+                        <td style="font-weight: 600;">$299.00</td>
+                        <td><button class="btn-remove"><i class="fas fa-trash-alt"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-product">
+                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=150&q=80" alt="Sneakers">
+                                <div><h4>AeroStride Sneakers</h4><small style="color:var(--text-muted)">Size: 10</small></div>
+                            </div>
+                        </td>
+                        <td class="quantity-selector"><input type="number" value="2" min="1"></td>
+                        <td>$120.00</td>
+                        <td style="font-weight: 600;">$240.00</td>
+                        <td><button class="btn-remove"><i class="fas fa-trash-alt"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <aside class="cart-summary">
+            <h3>Order Computation</h3>
+            <div class="summary-row" style="margin-top: 1.5rem;"><span>Total Base Items</span><span>3 Items</span></div>
+            <div class="summary-row"><span>Cart Subtotal</span><span>$539.00</span></div>
+            <div class="summary-row"><span>Estimated Shipping</span><span style="color: #10b981;">FREE</span></div>
+            <div class="summary-row"><span>Coupon Discount</span><span>-$0.00</span></div>
+            <div class="summary-row total"><span>Grand Total</span><span>$539.00</span></div>
+            <div class="cart-actions">
+                <a href="checkout.html" class="btn">Proceed To Checkout</a>
+                <a href="shop.html" class="btn btn-secondary">Continue Shopping</a>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom"><p>&copy; 2026 ApexMarket Inc. Formulated strictly for academic evaluation structures.</p></div>
+    </footer>
+</body>
+</html>
