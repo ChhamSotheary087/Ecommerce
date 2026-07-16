@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StyleWear - Your ultimate destination for modern fashion. Shop the latest trends.">
+  <title>StyleWear | Modern E-Commerce</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <p>Free shipping on all orders over $50! Use code SAVE20 for 20% off.</p>
+  </div>
+
+  <!-- Header & Nav -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span>Style</span>Wear
+      </a>
+      
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+
+      <div class="header-icons">
+        <button class="icon-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="icon-btn"><i class="fa-regular fa-heart"></i></button>
+        <a href="cart.html" class="icon-btn">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="badge">3</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-subtitle">New Collection 2026</span>
+          <h1>Discover Your Unique Style</h1>
+          <p>Explore our premium collection of modern fashion. High-quality materials, sustainable practices, and designs that make you stand out.</p>
+          <a href="shop.html" class="btn btn-primary">Shop Now</a>
+          <a href="#featured" class="btn btn-outline" style="color: white; border-color: white; margin-left: 1rem;">View Collection</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="container">
+      <div class="section-header">
+        <h2>Shop by Category</h2>
+        <p>Find exactly what you're looking for</p>
+      </div>
+      <div class="categories-grid">
+        <a href="shop.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Women's Fashion">
+          <div class="category-content">
+            <h3>Women's Fashion</h3>
+            <p>Explore trends</p>
+          </div>
+        </a>
+        <a href="shop.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Men's Fashion">
+          <div class="category-content">
+            <h3>Men's Fashion</h3>
+            <p>Classic & Modern</p>
+          </div>
+        </a>
+        <a href="shop.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1485230405346-71acb9518d9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Shoes">
+          <div class="category-content">
+            <h3>Footwear</h3>
+            <p>Step in style</p>
+          </div>
+        </a>
+        <a href="shop.html" class="category-card">
+          <img src="https://images.unsplash.com/photo-1550614000-4b95d8828909?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Accessories">
+          <div class="category-content">
+            <h3>Accessories</h3>
+            <p>Complete your look</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="featured" class="container">
+      <div class="section-header">
+        <h2>Featured Products</h2>
+        <p>Our top picks for you this week</p>
+      </div>
+      
+      <div class="product-grid">
+        <!-- Product 1 -->
+        <article class="product-card">
+          <div class="product-img">
+            <span class="badge-new">New</span>
+            <button class="action-btn-wishlist" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <img src="https://images.unsplash.com/photo-1529139574466-a30ab7308726?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Classic Leather Jacket">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title"><a href="shop.html">Classic Leather Jacket</a></h3>
+            <span class="product-category">Outerwear</span>
+            <div class="product-price-row" style="margin-top: 0; justify-content: flex-start; margin-bottom: 0.5rem;">
+              <div>
+                <span class="price" style="color: var(--success);">$199.99</span>
+                
+              </div>
+            </div>
+            <div class="product-rating" style="margin-bottom: 0.5rem;">
+              <i class="fa-solid fa-star" style="color: var(--warning);"></i><i class="fa-solid fa-star" style="color: var(--warning);"></i><i class="fa-solid fa-star" style="color: var(--warning);"></i><i class="fa-solid fa-star" style="color: var(--warning);"></i><i class="fa-solid fa-star-half-stroke" style="color: var(--warning);"></i>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">(4.5/5)</span>
+            </div>
+            <p class="product-desc">Experience crystal-clear sound with our premium wireless headphones. Perfect for music lovers and professionals alike.</p>
+            <div class="product-buttons">
+              <button class="btn-add-text">Add to Cart</button>
+              <button class="btn-quick-view">Quick View</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product-card">
+          <div class="product-img">
+            
+            <button class="action-btn-wishlist" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Minimalist Graphic T-Shirt">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title"><a href="shop.html">Minimalist Graphic T-Shirt</a></h3>
+            <span class="product-category">Tops</span>
+            <div class="product-price-row" style="margin-top: 0; justify-content: flex-start; margin-bottom: 0.5rem;">
+              <div>
+                <span class="price" style="color: var(--success);">$29.99</span>
+                <span class="old-price">$39.99</span>
+              </div>
+            </div>
+            <div class="product-rating" style="margin-bottom: 0.5rem;">
+              <i class="fa-solid fa-star" style="color: var(--warning);"></i><i class="fa-solid fa-star" style="color: var(--warning);"></i><i class="fa-solid fa-star" style="color: var(--warning);"></i><i class="fa-solid fa-star" style="color: var(--warning);"></i><i class="fa-solid fa-star-half-stroke" style="color: var(--warning);"></i>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">(4.5/5)</span>
+            </div>
+            <p class="product-desc">Experience crystal-clear sound with our premium wireless headphones. Perfect for music lovers and professionals alike.</p>
+            <div class="product-buttons">
+              <button class="btn-add-text">Add to Cart</button>
+              <button class="btn-quick-view">Quick View</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="product-card">
+          <div class="product-img">
+            
+            <button class="action-btn-wishlist" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <img src="https://images.unsplash.com/photo-1489987707023-af7e9267ce20?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Urban Denim Jeans">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title"><a href="shop.html">Urban Denim Jeans</a></h3>
+            <span class="product-category">Bottoms</span>
+            <div class="product-price-row" style="margin-top: 0; justify-content: flex-start; margin-bottom: 0.5rem;">
+              <div>
+                <span class="price" style="color: var(--success);">$79.99</span>
+                
+              </div>
+            </div>
+            <div class="product-rating" style="margin-bottom: 0.5rem;">
+              <i class="fa-solid fa-star" style="color: var(--warning);"></i><i class="fa-solid fa-star" style="color: var(--warning);"></i><i class="fa-solid fa-star" style="color: var(--warning);"></i><i class="fa-solid fa-star" style="color: var(--warning);"></i><i class="fa-solid fa-star-half-stroke" style="color: var(--warning);"></i>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">(4.5/5)</span>
+            </div>
+            <p class="product-desc">Experience crystal-clear sound with our premium wireless headphones. Perfect for music lovers and professionals alike.</p>
+            <div class="product-buttons">
+              <button class="btn-add-text">Add to Cart</button>
+              <button class="btn-quick-view">Quick View</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 4 -->
+        <article class="product-card">
+          <div class="product-img">
+            <span class="badge-new" style="background-color: var(--danger)">Sale</span>
+            <button class="action-btn-wishlist" title="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <img src="https://images.unsplash.com/photo-1539082217036-26e100eb13e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="White Classic Sneakers">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title"><a href="shop.html">White Classic Sneakers</a></h3>
+            <span class="product-category">Shoes</span>
+            <div class="product-price-row" style="margin-top: 0; justify-content: flex-start; margin-bottom: 0.5rem;">
+              <div>
+                <span class="price" style="color: var(--success);">$89.99</span>
+                <span class="old-price">$120.00</span>
+              </div>
+            </div>
+            <div class="product-rating" style="margin-bottom: 0.5rem;">
+              <i class="fa-solid fa-star" style="color: var(--warning);"></i><i class="fa-solid fa-star" style="color: var(--warning);"></i><i class="fa-solid fa-star" style="color: var(--warning);"></i><i class="fa-solid fa-star" style="color: var(--warning);"></i><i class="fa-solid fa-star-half-stroke" style="color: var(--warning);"></i>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">(4.5/5)</span>
+            </div>
+            <p class="product-desc">Experience crystal-clear sound with our premium wireless headphones. Perfect for music lovers and professionals alike.</p>
+            <div class="product-buttons">
+              <button class="btn-add-text">Add to Cart</button>
+              <button class="btn-quick-view">Quick View</button>
+            </div>
+          </div>
+        </article>
+      </div>
+      
+      <div style="display: flex; justify-content: center; gap: 4rem; margin-top: 4rem; margin-bottom: 5rem; color: var(--text-muted); text-align: center; flex-wrap: wrap;">
+        <div>
+          <i class="fa-solid fa-truck-fast" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;"></i>
+          <h4 style="color: var(--text-main);">Free Shipping</h4>
+          <p style="font-size: 0.875rem;">On orders over $50</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-rotate-left" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;"></i>
+          <h4 style="color: var(--text-main);">Easy Returns</h4>
+          <p style="font-size: 0.875rem;">30-day return policy</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-shield-halved" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;"></i>
+          <h4 style="color: var(--text-main);">Secure Payment</h4>
+          <p style="font-size: 0.875rem;">100% secure checkout</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="container">
+      <div class="promo">
+        <div class="promo-content">
+          <h2>Summer Clearance Sale</h2>
+          <p>Get up to 50% off on all summer collections. Don't miss out on our biggest sale of the year. Upgrade your wardrobe today!</p>
+          <a href="shop.html" class="btn" style="background: white; color: var(--primary-color);">Shop Sale Now</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1512436991641-dc74eb4ba50c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Summer Sale" class="promo-img" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="container" style="padding-top: 2rem;">
+      <div class="section-header">
+        <h2>What Our Customers Say</h2>
+        <p>Trusted by thousands of fashion lovers</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">Absolutely love the quality of the clothes! The shipping was incredibly fast and the customer service was top notch. Will definitely be shopping here again.</p>
+          <div class="testimonial-user">
+            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Sarah J.">
+            <div>
+              <h4 style="font-size: 1rem;">Sarah Jenkins</h4>
+              <div class="product-rating" style="margin: 0;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">The website is so easy to navigate, and the checkout process was seamless. The jacket I bought fits perfectly and looks even better in person.</p>
+          <div class="testimonial-user">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Michael T.">
+            <div>
+              <h4 style="font-size: 1rem;">Michael Thorne</h4>
+              <div class="product-rating" style="margin: 0;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">I've been looking for sustainable fashion brands and I'm so glad I found StyleWear. Great styles without compromising on ethics.</p>
+          <div class="testimonial-user">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Emily R.">
+            <div>
+              <h4 style="font-size: 1rem;">Emily Roberts</h4>
+              <div class="product-rating" style="margin: 0;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="container">
+        <h2>Join Our Newsletter</h2>
+        <p style="color: var(--text-muted); margin-top: 0.5rem;">Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+        <form class="newsletter-form" action="#" method="get">
+          <input type="email" placeholder="Enter your email address" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="color: white; margin-bottom: 1rem;">
+            <i class="fa-solid fa-bag-shopping"></i> StyleWear
+          </a>
+          <p>Your one-stop destination for modern, sustainable, and stylish fashion. Elevate your wardrobe today.</p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Customer Service</h3>
+          <ul class="footer-links">
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Track Your Order</a></li>
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">Payment Methods</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Contact Info</h3>
+          <ul class="footer-links">
+            <li><i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i> 123 Fashion Ave, NY 10001</li>
+            <li><i class="fa-solid fa-phone" style="margin-right: 10px;"></i> +1 (555) 123-4567</li>
+            <li><i class="fa-solid fa-envelope" style="margin-right: 10px;"></i> support@stylewear.com</li>
+            <li><i class="fa-solid fa-clock" style="margin-right: 10px;"></i> Mon - Fri: 9AM - 6PM</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 StyleWear. All Rights Reserved. Designed for University Assignment.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

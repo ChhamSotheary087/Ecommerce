@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frequently Asked Questions - StyleWear">
+  <title>FAQ | StyleWear</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span>Style</span>Wear
+      </a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-btn"><i class="fa-solid fa-bars"></i></label>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html" class="active">FAQ</a>
+      </nav>
+      <div class="header-icons">
+        <a href="cart.html" class="icon-btn"><i class="fa-solid fa-cart-shopping"></i><span class="badge">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <p style="font-size: 1.125rem; opacity: 0.9;">Got a question? We're here to answer!</p>
+      </div>
+    </div>
+
+    <section class="container" style="max-width: 800px; padding: 4rem 1.5rem;">
+      <h2 style="margin-bottom: 2rem; text-align: center;">Orders & Shipping</h2>
+      
+      <div class="faq-item">
+        <label for="faq1" class="faq-question">
+          How long will it take to receive my order?
+          <i class="fa-solid fa-chevron-down"></i>
+        </label>
+        <input type="checkbox" id="faq1" style="display: none;">
+        <div class="faq-answer">
+          <p style="margin-top: 1rem;">Standard shipping usually takes 3-5 business days. Express shipping takes 1-2 business days. International orders may take 7-14 business days depending on the destination.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <label for="faq2" class="faq-question">
+          Do you offer free shipping?
+          <i class="fa-solid fa-chevron-down"></i>
+        </label>
+        <input type="checkbox" id="faq2" style="display: none;">
+        <div class="faq-answer">
+          <p style="margin-top: 1rem;">Yes! We offer free standard shipping on all orders over $50 within the United States.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <label for="faq3" class="faq-question">
+          How can I track my order?
+          <i class="fa-solid fa-chevron-down"></i>
+        </label>
+        <input type="checkbox" id="faq3" style="display: none;">
+        <div class="faq-answer">
+          <p style="margin-top: 1rem;">Once your order has been dispatched, you will receive an email with a tracking number and a link to track your package on the carrier's website.</p>
+        </div>
+      </div>
+
+      <h2 style="margin: 3rem 0 2rem; text-align: center;">Returns & Refunds</h2>
+      
+      <div class="faq-item">
+        <label for="faq4" class="faq-question">
+          What is your return policy?
+          <i class="fa-solid fa-chevron-down"></i>
+        </label>
+        <input type="checkbox" id="faq4" style="display: none;">
+        <div class="faq-answer">
+          <p style="margin-top: 1rem;">We accept returns within 30 days of delivery. Items must be unworn, unwashed, and in their original condition with all tags attached.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <label for="faq5" class="faq-question">
+          How long does a refund take?
+          <i class="fa-solid fa-chevron-down"></i>
+        </label>
+        <input type="checkbox" id="faq5" style="display: none;">
+        <div class="faq-answer">
+          <p style="margin-top: 1rem;">Once we receive and inspect your returned item, we will process the refund to your original payment method. Please allow 5-7 business days for the funds to appear in your account.</p>
+        </div>
+      </div>
+
+      <style>
+        /* CSS Trick to toggle FAQ answer visibility without JS */
+        .faq-item input:checked + .faq-answer {
+          display: block;
+        }
+        .faq-item input:not(:checked) + .faq-answer {
+          display: none;
+        }
+        .faq-item input:checked ~ .faq-question i {
+          transform: rotate(180deg);
+        }
+        .faq-question i {
+          transition: transform 0.3s ease;
+        }
+      </style>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="text-align: center;">
+      <p>&copy; 2026 StyleWear. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
