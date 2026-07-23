@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details | SOVANN</title>
+    <meta
+      name="description"
+      content="Explore details, specifications, and client reviews for our luxury collection items. Fine craftsmanship, minimal aesthetic, premium packaging."
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=32&q=80"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+              serif: ['"Playfair Display"', "serif"],
+            },
+            colors: {
+              gold: {
+                50: "#fdfbeb",
+                100: "#fcf7c7",
+                200: "#f9ee91",
+                300: "#f5df4d",
+                400: "#f0ca22",
+                500: "#d4af37",
+                600: "#bfa030",
+                700: "#8b6f1e",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-white text-neutral-900 min-h-screen flex flex-col font-sans">
+    <div id="page-loader" class="page-loader">
+      <div class="flex flex-col items-center">
+        <div
+          class="w-12 h-12 border-2 border-neutral-200 border-t-neutral-950 rounded-full animate-spin"
+        ></div>
+        <p
+          class="mt-4 text-[10px] uppercase font-bold tracking-widest text-neutral-400"
+        >
+          S O V A N N
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="bg-neutral-950 text-white text-[10px] font-bold tracking-widest py-2.5 px-4 text-center uppercase border-b border-neutral-800"
+    >
+      Free worldwide shipping on orders over $150 &bull; Use code
+      <span class="text-gold-300">SOVANN20</span> for 20% off
+    </div>
+
+    <header
+      id="main-header"
+      class="sticky top-0 w-full z-50 bg-white transition-all duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+      >
+        <button
+          id="mobile-menu-btn"
+          class="lg:hidden text-neutral-800 p-2 focus:outline-none"
+          aria-label="Open mobile menu"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <div class="flex items-center">
+          <a
+            href="index.html"
+            class="font-serif text-2xl font-bold tracking-[0.25em] text-neutral-950 hover:text-gold-500 transition-colors uppercase"
+          >
+            SOVANN
+          </a>
+        </div>
+
+        <nav
+          class="hidden lg:flex items-center space-x-10 text-xs font-bold uppercase tracking-widest"
+        >
+          <a
+            href="index.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors pb-1"
+            >Home</a
+          >
+          <a
+            href="shop.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors pb-1"
+            >Shop</a
+          >
+          <a
+            href="about.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors pb-1"
+            >About Us</a
+          >
+          <a
+            href="contact.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors pb-1"
+            >Contact</a
+          >
+          <a
+            href="faq.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors pb-1"
+            >FAQs</a
+          >
+        </nav>
+
+        <div class="flex items-center space-x-4">
+          <button
+            id="search-trigger-btn"
+            class="p-2 text-neutral-800 hover:text-gold-500 transition-colors relative"
+            aria-label="Search products"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+
+          <a
+            href="shop.html"
+            class="p-2 text-neutral-800 hover:text-gold-500 transition-colors relative"
+            aria-label="Wishlist"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              />
+            </svg>
+            <span
+              class="wishlist-badge-count absolute top-0.5 right-0.5 bg-neutral-900 text-white text-[8px] font-bold w-4.5 h-4.5 rounded-full flex items-center justify-center border border-white hidden"
+              >0</span
+            >
+          </a>
+
+          <a
+            href="cart.html"
+            class="p-2 text-neutral-800 hover:text-gold-500 transition-colors relative"
+            aria-label="Shopping Cart"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+              />
+            </svg>
+            <span
+              class="cart-badge-count absolute top-0.5 right-0.5 bg-gold-500 text-neutral-950 text-[8px] font-bold w-4.5 h-4.5 rounded-full flex items-center justify-center border border-white hidden"
+              >0</span
+            >
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div
+      id="mobile-menu-overlay"
+      class="fixed inset-0 bg-black/40 z-50 hidden transition-opacity"
+    ></div>
+    <div
+      id="mobile-menu-drawer"
+      class="fixed top-0 right-0 bottom-0 w-80 max-w-full bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out p-6 flex flex-col justify-between"
+    >
+      <div>
+        <div
+          class="flex items-center justify-between border-b border-gray-100 pb-4 mb-6"
+        >
+          <span
+            class="font-serif text-lg font-bold tracking-[0.2em] uppercase text-neutral-900"
+            >Navigation</span
+          >
+          <button
+            id="close-mobile-menu"
+            class="p-2 text-neutral-500 hover:text-neutral-900"
+            aria-label="Close menu"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <nav
+          class="flex flex-col space-y-5 text-sm font-bold uppercase tracking-wider"
+        >
+          <a
+            href="index.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors"
+            >Home</a
+          >
+          <a
+            href="shop.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors"
+            >Shop</a
+          >
+          <a
+            href="about.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors"
+            >About Us</a
+          >
+          <a
+            href="contact.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors"
+            >Contact</a
+          >
+          <a
+            href="faq.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors"
+            >FAQs</a
+          >
+        </nav>
+      </div>
+      <div class="border-t border-gray-100 pt-6">
+        <div
+          class="text-center text-[10px] text-gray-400 uppercase tracking-widest"
+        >
+          &copy; 2026 SOVANN
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="search-overlay"
+      class="fixed inset-0 bg-neutral-950/95 z-[99] hidden items-center justify-center transition-opacity duration-300"
+    >
+      <button
+        id="close-search-btn"
+        class="absolute top-6 right-6 text-white hover:text-gold-500 p-2"
+        aria-label="Close search"
+      >
+        <svg
+          class="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+      <div class="w-full max-w-2xl px-6 text-center">
+        <h3 class="text-white text-xs font-bold uppercase tracking-widest mb-6">
+          Search Our Luxury Collection
+        </h3>
+        <form id="search-overlay-form" class="relative">
+          <input
+            id="search-overlay-input"
+            type="text"
+            placeholder="Type something..."
+            class="w-full bg-transparent border-b-2 border-neutral-700 text-white font-serif text-3xl focus:outline-none focus:border-gold-500 text-center pb-3 tracking-wide"
+          />
+          <button
+            type="submit"
+            class="absolute right-0 bottom-4 text-neutral-400 hover:text-white"
+            aria-label="Submit search"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div
+        class="flex items-center gap-2 text-[10px] uppercase font-bold tracking-widest text-neutral-400 mb-8"
+      >
+        <a href="index.html" class="hover:text-neutral-900 transition-colors"
+          >Home</a
+        >
+        <span>&bull;</span>
+        <a href="shop.html" class="hover:text-neutral-900 transition-colors"
+          >Shop</a
+        >
+        <span>&bull;</span>
+        <span id="product-breadcrumb-name" class="text-neutral-900"
+          >Loading Product...</span
+        >
+      </div>
+
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-20 items-start"
+      >
+        <div class="space-y-4">
+          <div
+            class="relative w-full aspect-[4/5] bg-neutral-50 rounded-3xl overflow-hidden shadow-sm border border-neutral-100"
+          >
+            <img
+              id="detail-main-img"
+              src=""
+              alt="Main Product Image"
+              class="w-full h-full object-cover transition-opacity duration-300"
+            />
+          </div>
+          <div id="detail-thumb-grid" class="grid grid-cols-4 gap-4"></div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="flex items-center justify-between">
+            <div id="detail-badge-container"></div>
+            <div class="flex items-center gap-2">
+              <div id="detail-rating-stars" class="flex text-yellow-500"></div>
+              <span
+                id="detail-reviews-count"
+                class="text-[10px] text-gray-400 font-bold uppercase tracking-wider"
+              ></span>
+            </div>
+          </div>
+
+          <h1
+            id="detail-title"
+            class="text-3xl sm:text-4xl font-serif font-bold text-neutral-950 tracking-wide"
+          ></h1>
+
+          <div class="flex items-center gap-3">
+            <span
+              id="detail-price"
+              class="text-2xl font-bold text-neutral-950"
+            ></span>
+            <span
+              id="detail-old-price"
+              class="text-base line-through text-gray-400 font-medium hidden"
+            ></span>
+          </div>
+
+          <div class="border-t border-neutral-100 pt-6">
+            <p
+              id="detail-description"
+              class="text-sm text-neutral-600 leading-relaxed mb-6"
+            ></p>
+            <ul id="detail-features" class="space-y-2 mb-6"></ul>
+          </div>
+
+          <div class="border-y border-neutral-100 py-6 space-y-6">
+            <div>
+              <span
+                class="text-xs uppercase font-bold tracking-widest text-neutral-400 block mb-3"
+                >Color:</span
+              >
+              <div id="detail-color-selector" class="flex gap-2"></div>
+            </div>
+
+            <div>
+              <span
+                class="text-xs uppercase font-bold tracking-widest text-neutral-400 block mb-3"
+                >Size:</span
+              >
+              <div id="detail-size-selector" class="flex gap-2"></div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <div
+              class="flex items-center border border-neutral-200 rounded-full px-3 py-2 w-32 justify-between"
+            >
+              <button
+                id="detail-qty-minus"
+                class="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-neutral-900 text-lg transition-colors font-bold"
+              >
+                -
+              </button>
+              <input
+                id="detail-qty-input"
+                type="text"
+                value="1"
+                readonly
+                class="w-8 bg-transparent text-center text-xs font-bold text-neutral-900 border-0 focus:ring-0 focus:outline-none"
+              />
+              <button
+                id="detail-qty-plus"
+                class="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-neutral-900 text-lg transition-colors font-bold"
+              >
+                +
+              </button>
+            </div>
+
+            <button
+              id="detail-add-to-cart-btn"
+              class="flex-grow sm:flex-grow-0 px-8 py-4 bg-neutral-950 text-white hover:bg-neutral-800 rounded-full text-xs font-bold uppercase tracking-widest transition-luxury shadow-md"
+            >
+              Add to Cart
+            </button>
+
+            <button
+              id="detail-wishlist-btn"
+              class="w-12 h-12 flex items-center justify-center border border-gray-200 rounded-full text-neutral-400 hover:text-red-500 hover:border-red-200 transition-luxury shadow-sm"
+            >
+              <svg
+                class="w-5 h-5 fill-none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <section class="border-t border-neutral-100 pt-12 mb-20">
+        <div class="flex justify-center border-b border-neutral-100 gap-8 mb-8">
+          <button
+            id="tab-desc-btn"
+            class="pb-4 border-b-2 border-neutral-900 text-neutral-900 text-xs font-bold uppercase tracking-widest transition-all"
+          >
+            Description
+          </button>
+          <button
+            id="tab-reviews-btn"
+            class="pb-4 border-b-2 border-transparent text-gray-400 hover:text-neutral-900 text-xs font-bold uppercase tracking-widest transition-all"
+          >
+            Reviews & Feedback
+          </button>
+        </div>
+
+        <div>
+          <div id="pane-description" class="max-w-2xl mx-auto space-y-6">
+            <p class="text-sm text-neutral-600 leading-relaxed">
+              Every piece is created with careful attention to detail. We
+              collaborate exclusively with sustainable mills and factories to
+              select certified organic cottons, heavy sandwashed silks, and fine
+              Mongolian cashmeres. This item represents our commitment to
+              ethical manufacturing and minimal, premium design that fits
+              effortlessly into any modern capsule wardrobe.
+            </p>
+            <div
+              class="grid grid-cols-2 gap-6 pt-4 border-t border-neutral-50 text-xs font-semibold text-neutral-500"
+            >
+              <div>
+                <span class="block uppercase text-[10px] text-gray-400 mb-1"
+                  >Materials:</span
+                >
+                <span class="text-neutral-800"
+                  >Sustainably sourced and structured fibers</span
+                >
+              </div>
+              <div>
+                <span class="block uppercase text-[10px] text-gray-400 mb-1"
+                  >Care Instructions:</span
+                >
+                <span class="text-neutral-800"
+                  >Dry Clean recommended, or gentle cold wash</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="pane-reviews"
+            class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-10 items-start hidden"
+          >
+            <div
+              id="reviews-list-container"
+              class="space-y-6 max-h-[500px] overflow-y-auto pr-4"
+            >
+              <div class="border-b border-gray-100 pb-6">
+                <div class="flex justify-between items-start mb-2">
+                  <div>
+                    <h4 class="text-sm font-bold text-neutral-800">
+                      Victoria K.
+                    </h4>
+                    <p class="text-[10px] text-gray-400 mt-0.5">
+                      April 12, 2026
+                    </p>
+                  </div>
+                  <div class="flex text-yellow-500">
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                      <path
+                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <p class="text-sm text-neutral-600 leading-relaxed">
+                  Absolutely worth the purchase! The material feels heavy and
+                  premium, yet is soft to wear. Fits true to size. Delivery took
+                  only 3 days. Highly recommend.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-neutral-50 p-6 rounded-3xl border border-neutral-100/50"
+            >
+              <h4
+                class="text-xs font-bold uppercase tracking-widest text-neutral-900 mb-4"
+              >
+                Write a Review
+              </h4>
+              <form id="submit-review-form" class="space-y-4">
+                <div>
+                  <label
+                    class="block text-[10px] uppercase font-bold text-gray-400 mb-1.5"
+                    >Rating:</label
+                  >
+                  <select
+                    name="rating"
+                    required
+                    class="w-full bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-xs font-semibold focus:outline-none focus:border-neutral-950"
+                  >
+                    <option value="5">5 Stars &bull; Excellent</option>
+                    <option value="4">4 Stars &bull; Good</option>
+                    <option value="3">3 Stars &bull; Average</option>
+                    <option value="2">2 Stars &bull; Disappointing</option>
+                    <option value="1">1 Star &bull; Poor</option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    class="block text-[10px] uppercase font-bold text-gray-400 mb-1.5"
+                    >Review message:</label
+                  >
+                  <textarea
+                    name="review"
+                    required
+                    rows="4"
+                    placeholder="Your review..."
+                    class="w-full bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-xs focus:outline-none focus:border-neutral-950 placeholder-gray-400"
+                  ></textarea>
+                </div>
+                <div>
+                  <label
+                    class="block text-[10px] uppercase font-bold text-gray-400 mb-1.5"
+                    >Your Name:</label
+                  >
+                  <input
+                    name="name"
+                    type="text"
+                    required
+                    placeholder="Name"
+                    class="w-full bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-xs focus:outline-none focus:border-neutral-950 placeholder-gray-400"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="w-full py-3 bg-neutral-950 text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-neutral-800 transition-colors"
+                >
+                  Submit Review
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-t border-neutral-100 pt-16">
+        <div class="text-center max-w-lg mx-auto mb-12">
+          <span
+            class="text-xs uppercase font-bold tracking-widest text-gold-500"
+            >Curated For You</span
+          >
+          <h2 class="text-2xl font-serif font-bold mt-2 text-neutral-950">
+            Related Products
+          </h2>
+        </div>
+
+        <div
+          id="related-products-grid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+        ></div>
+      </section>
+    </main>
+
+    <footer
+      class="bg-neutral-950 text-white border-t border-neutral-900 pt-20 pb-10"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16"
+      >
+        <div>
+          <a
+            href="index.html"
+            class="font-serif text-xl font-bold tracking-[0.2em] uppercase text-white hover:text-gold-500 transition-colors"
+            >Sovann</a
+          >
+          <p class="text-xs text-neutral-400 leading-relaxed mt-6 max-w-sm">
+            SOVANN represents the pinnacle of minimal luxury and fine
+            craftsmanship. Every piece in our collection is curated to transcend
+            temporary trends, offering enduring elegance for the modern
+            individual.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="text-xs font-bold uppercase tracking-widest text-white mb-6"
+          >
+            Collections
+          </h4>
+          <ul class="space-y-3.5 text-xs text-neutral-400">
+            <li>
+              <a
+                href="shop.html?gender=women"
+                class="hover:text-white transition-colors"
+                >Women's Collection</a
+              >
+            </li>
+            <li>
+              <a
+                href="shop.html?gender=men"
+                class="hover:text-white transition-colors"
+                >Men's Collection</a
+              >
+            </li>
+            <li>
+              <a
+                href="shop.html?category=Bags"
+                class="hover:text-white transition-colors"
+                >Leather Accessories</a
+              >
+            </li>
+            <li>
+              <a
+                href="shop.html?category=Shoes"
+                class="hover:text-white transition-colors"
+                >Shoes & Sneakers</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-xs font-bold uppercase tracking-widest text-white mb-6"
+          >
+            Customer Service
+          </h4>
+          <ul class="space-y-3.5 text-xs text-neutral-400">
+            <li>
+              <a href="about.html" class="hover:text-white transition-colors"
+                >Our Story</a
+              >
+            </li>
+            <li>
+              <a href="contact.html" class="hover:text-white transition-colors"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a href="faq.html" class="hover:text-white transition-colors"
+                >Help & FAQs</a
+              >
+            </li>
+            <li>
+              <a href="shop.html" class="hover:text-white transition-colors"
+                >Return Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-xs font-bold uppercase tracking-widest text-white mb-6"
+          >
+            Contact & Socials
+          </h4>
+          <ul class="space-y-3.5 text-xs text-neutral-400">
+            <li>
+              Email:
+              <a
+                href="mailto:concierge@sovannstore.com"
+                class="hover:text-white transition-colors"
+                >concierge@sovannstore.com</a
+              >
+            </li>
+            <li>
+              Phone:
+              <a
+                href="tel:+18005550199"
+                class="hover:text-white transition-colors"
+                >+1 (800) 555-0199</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-neutral-900 flex flex-col md:flex-row items-center justify-between text-[10px] text-neutral-500 uppercase tracking-widest gap-4"
+      >
+        <div>&copy; 2026 SOVANN Luxury Store. All rights reserved.</div>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-white transition-colors"
+            >Privacy Policy</a
+          >
+          <a href="#" class="hover:text-white transition-colors"
+            >Terms of Service</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions | SOVANN</title>
+    <meta
+      name="description"
+      content="Find answers to shipping times, return policies, size guides, custom tailoring options, and sustainability practices at SOVANN."
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=32&q=80"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+              serif: ['"Playfair Display"', "serif"],
+            },
+            colors: {
+              gold: {
+                50: "#fdfbeb",
+                100: "#fcf7c7",
+                200: "#f9ee91",
+                300: "#f5df4d",
+                400: "#f0ca22",
+                500: "#d4af37",
+                600: "#bfa030",
+                700: "#8b6f1e",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-white text-neutral-900 min-h-screen flex flex-col font-sans">
+    <div id="page-loader" class="page-loader">
+      <div class="flex flex-col items-center">
+        <div
+          class="w-12 h-12 border-2 border-neutral-200 border-t-neutral-950 rounded-full animate-spin"
+        ></div>
+        <p
+          class="mt-4 text-[10px] uppercase font-bold tracking-widest text-neutral-400"
+        >
+          S O V A N N
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="bg-neutral-950 text-white text-[10px] font-bold tracking-widest py-2.5 px-4 text-center uppercase border-b border-neutral-800"
+    >
+      Free worldwide shipping on orders over $150 &bull; Use code
+      <span class="text-gold-300">SOVANN20</span> for 20% off
+    </div>
+
+    <header
+      id="main-header"
+      class="sticky top-0 w-full z-50 bg-white transition-all duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+      >
+        <button
+          id="mobile-menu-btn"
+          class="lg:hidden text-neutral-800 p-2 focus:outline-none"
+          aria-label="Open mobile menu"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <div class="flex items-center">
+          <a
+            href="index.html"
+            class="font-serif text-2xl font-bold tracking-[0.25em] text-neutral-950 hover:text-gold-500 transition-colors uppercase"
+          >
+            SOVANN
+          </a>
+        </div>
+
+        <nav
+          class="hidden lg:flex items-center space-x-10 text-xs font-bold uppercase tracking-widest"
+        >
+          <a
+            href="index.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors pb-1"
+            >Home</a
+          >
+          <a
+            href="shop.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors pb-1"
+            >Shop</a
+          >
+          <a
+            href="about.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors pb-1"
+            >About Us</a
+          >
+          <a
+            href="contact.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors pb-1"
+            >Contact</a
+          >
+          <a
+            href="faq.html"
+            class="text-neutral-900 border-b-2 border-neutral-900 pb-1"
+            >FAQs</a
+          >
+        </nav>
+
+        <div class="flex items-center space-x-4">
+          <button
+            id="search-trigger-btn"
+            class="p-2 text-neutral-800 hover:text-gold-500 transition-colors relative"
+            aria-label="Search products"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+
+          <a
+            href="shop.html"
+            class="p-2 text-neutral-800 hover:text-gold-500 transition-colors relative"
+            aria-label="Wishlist"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              />
+            </svg>
+            <span
+              class="wishlist-badge-count absolute top-0.5 right-0.5 bg-neutral-900 text-white text-[8px] font-bold w-4.5 h-4.5 rounded-full flex items-center justify-center border border-white hidden"
+              >0</span
+            >
+          </a>
+
+          <a
+            href="cart.html"
+            class="p-2 text-neutral-800 hover:text-gold-500 transition-colors relative"
+            aria-label="Shopping Cart"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+              />
+            </svg>
+            <span
+              class="cart-badge-count absolute top-0.5 right-0.5 bg-gold-500 text-neutral-950 text-[8px] font-bold w-4.5 h-4.5 rounded-full flex items-center justify-center border border-white hidden"
+              >0</span
+            >
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div
+      id="mobile-menu-overlay"
+      class="fixed inset-0 bg-black/40 z-50 hidden transition-opacity"
+    ></div>
+    <div
+      id="mobile-menu-drawer"
+      class="fixed top-0 right-0 bottom-0 w-80 max-w-full bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out p-6 flex flex-col justify-between"
+    >
+      <div>
+        <div
+          class="flex items-center justify-between border-b border-gray-100 pb-4 mb-6"
+        >
+          <span
+            class="font-serif text-lg font-bold tracking-[0.2em] uppercase text-neutral-900"
+            >Navigation</span
+          >
+          <button
+            id="close-mobile-menu"
+            class="p-2 text-neutral-500 hover:text-neutral-900"
+            aria-label="Close menu"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <nav
+          class="flex flex-col space-y-5 text-sm font-bold uppercase tracking-wider"
+        >
+          <a
+            href="index.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors"
+            >Home</a
+          >
+          <a
+            href="shop.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors"
+            >Shop</a
+          >
+          <a
+            href="about.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors"
+            >About Us</a
+          >
+          <a
+            href="contact.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors"
+            >Contact</a
+          >
+          <a href="faq.html" class="text-neutral-950">FAQs</a>
+        </nav>
+      </div>
+      <div class="border-t border-gray-100 pt-6">
+        <div
+          class="text-center text-[10px] text-gray-400 uppercase tracking-widest"
+        >
+          &copy; 2026 SOVANN
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="search-overlay"
+      class="fixed inset-0 bg-neutral-950/95 z-[99] hidden items-center justify-center transition-opacity duration-300"
+    >
+      <button
+        id="close-search-btn"
+        class="absolute top-6 right-6 text-white hover:text-gold-500 p-2"
+        aria-label="Close search"
+      >
+        <svg
+          class="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+      <div class="w-full max-w-2xl px-6 text-center">
+        <h3 class="text-white text-xs font-bold uppercase tracking-widest mb-6">
+          Search Our Luxury Collection
+        </h3>
+        <form id="search-overlay-form" class="relative">
+          <input
+            id="search-overlay-input"
+            type="text"
+            placeholder="Type something..."
+            class="w-full bg-transparent border-b-2 border-neutral-700 text-white font-serif text-3xl focus:outline-none focus:border-gold-500 text-center pb-3 tracking-wide"
+          />
+          <button
+            type="submit"
+            class="absolute right-0 bottom-4 text-neutral-400 hover:text-white"
+            aria-label="Submit search"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <main class="w-full flex-grow flex flex-col">
+      <!-- Rich Hero Section -->
+      <section class="relative w-full h-[320px] flex items-center justify-center overflow-hidden border-b border-neutral-100">
+        <img src="https://images.unsplash.com/photo-1605282531317-578f773410db?q=80&w=1600" class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-multiply" alt="Floral background" />
+        <div class="absolute inset-0 bg-gradient-to-r from-[#FAF9F6] via-[#FAF9F6]/80 to-[#FAF9F6]"></div>
+        
+        <div class="relative z-10 w-full max-w-4xl px-4 text-center">
+          <span class="text-[10px] uppercase font-bold tracking-[0.2em] text-gold-500 block mb-4">
+            HELP CENTER
+          </span>
+          <h1 class="text-4xl md:text-5xl font-serif font-bold text-neutral-950 mb-4 tracking-tight">
+            Frequently Asked Questions
+          </h1>
+          <p class="text-xs text-neutral-500 mb-8 max-w-lg mx-auto leading-relaxed">
+            Find instant answers regarding shipping, returns, sizing, and sustainability.
+          </p>
+          <div class="max-w-xl mx-auto relative group">
+            <svg
+              class="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2 group-focus-within:text-gold-500 transition-colors"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+            <input
+              id="faq-search-input"
+              type="text"
+              placeholder="Search questions..."
+              class="w-full pl-12 pr-6 py-3.5 bg-white border border-neutral-200 rounded-xl text-sm focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-all placeholder-gray-400 shadow-sm"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Content -->
+      <section class="max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col md:flex-row gap-12 lg:gap-24 items-start">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="w-full md:w-72 flex-shrink-0 sticky top-32 hidden md:block">
+          <nav class="flex flex-col space-y-1">
+            <a href="#ordering" class="flex items-center gap-4 px-5 py-3.5 bg-[#FAF9F6] rounded-xl text-neutral-950 font-bold text-xs uppercase tracking-widest transition-colors">
+              <svg class="w-5 h-5 text-neutral-950" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.25v.225c0 .416-.336.75-.75.75h-3a.75.75 0 01-.75-.75V7.5m12 3v4.075c0 .416-.336.75-.75.75H14.25m0-11.25H6.375c-.621 0-1.125.504-1.125 1.125v13.5c0 .621.504 1.125 1.125 1.125M14.25 7.5h2.25M6 10.5h1.5M6 13.5h1.5M6 16.5h1.5" /></svg>
+              Ordering & Shipping
+            </a>
+            <a href="#returns" class="flex items-center gap-4 px-5 py-3.5 rounded-xl text-neutral-500 hover:bg-neutral-50 hover:text-neutral-950 font-semibold text-xs uppercase tracking-widest transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" /></svg>
+              Returns & Exchanges
+            </a>
+            <a href="#sizing" class="flex items-center gap-4 px-5 py-3.5 rounded-xl text-neutral-500 hover:bg-neutral-50 hover:text-neutral-950 font-semibold text-xs uppercase tracking-widest transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" /></svg>
+              Sizing & Fit
+            </a>
+            <a href="#payments" class="flex items-center gap-4 px-5 py-3.5 rounded-xl text-neutral-500 hover:bg-neutral-50 hover:text-neutral-950 font-semibold text-xs uppercase tracking-widest transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" /></svg>
+              Payments & Discounts
+            </a>
+            <a href="#products" class="flex items-center gap-4 px-5 py-3.5 rounded-xl text-neutral-500 hover:bg-neutral-50 hover:text-neutral-950 font-semibold text-xs uppercase tracking-widest transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" /></svg>
+              Products & Materials
+            </a>
+            <a href="#sustainability" class="flex items-center gap-4 px-5 py-3.5 rounded-xl text-neutral-500 hover:bg-neutral-50 hover:text-neutral-950 font-semibold text-xs uppercase tracking-widest transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" /></svg>
+              Sustainability
+            </a>
+          </nav>
+        </aside>
+
+        <!-- Main Accordions -->
+        <div class="flex-grow max-w-4xl w-full">
+          <div class="space-y-16">
+            
+            <!-- Ordering & Shipping -->
+            <div id="ordering" class="scroll-mt-32">
+              <h3 class="font-serif text-2xl font-bold text-neutral-900 border-b-2 border-neutral-900 pb-4 mb-4">
+                Ordering & Shipping
+              </h3>
+              <div class="space-y-0">
+                <div class="faq-item border-b border-neutral-200 group">
+                  <button class="accordion-header w-full text-left py-5 flex items-center justify-between text-[11px] sm:text-xs font-bold uppercase tracking-widest text-neutral-900 hover:text-gold-500 focus:outline-none transition-colors [&.active_svg]:rotate-180">
+                    <span>Do you ship internationally?</span>
+                    <svg class="w-5 h-5 transform transition-transform duration-300 text-neutral-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                  </button>
+                  <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-6 pr-8 text-xs text-neutral-500 leading-relaxed font-medium">
+                      Yes, we ship to over 100 countries worldwide. Free standard shipping is automatically applied to all orders over $150. For orders under $150, a flat fee of $15 is charged.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="faq-item border-b border-neutral-200 group">
+                  <button class="accordion-header w-full text-left py-5 flex items-center justify-between text-[11px] sm:text-xs font-bold uppercase tracking-widest text-neutral-900 hover:text-gold-500 focus:outline-none transition-colors [&.active_svg]:rotate-180">
+                    <span>How can I track my package?</span>
+                    <svg class="w-5 h-5 transform transition-transform duration-300 text-neutral-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                  </button>
+                  <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-6 pr-8 text-xs text-neutral-500 leading-relaxed font-medium">
+                      Once your order is processed and dispatched (usually within 1-2 business days), you will receive a confirmation email containing a tracking number and a link to trace your delivery in real-time.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Returns & Exchanges -->
+            <div id="returns" class="scroll-mt-32">
+              <h3 class="font-serif text-2xl font-bold text-neutral-900 border-b-2 border-neutral-900 pb-4 mb-4">
+                Returns & Exchanges
+              </h3>
+              <div class="space-y-0">
+                <div class="faq-item border-b border-neutral-200 group">
+                  <button class="accordion-header w-full text-left py-5 flex items-center justify-between text-[11px] sm:text-xs font-bold uppercase tracking-widest text-neutral-900 hover:text-gold-500 focus:outline-none transition-colors [&.active_svg]:rotate-180">
+                    <span>What is your return policy?</span>
+                    <svg class="w-5 h-5 transform transition-transform duration-300 text-neutral-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                  </button>
+                  <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-6 pr-8 text-xs text-neutral-500 leading-relaxed font-medium">
+                      We offer free returns within 30 days of receiving your order. The returned items must be unworn, unwashed, in their original packaging with tags attached. Please note that sale items or custom tailored pieces are final sale.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="faq-item border-b border-neutral-200 group">
+                  <button class="accordion-header w-full text-left py-5 flex items-center justify-between text-[11px] sm:text-xs font-bold uppercase tracking-widest text-neutral-900 hover:text-gold-500 focus:outline-none transition-colors [&.active_svg]:rotate-180">
+                    <span>How do I process an exchange?</span>
+                    <svg class="w-5 h-5 transform transition-transform duration-300 text-neutral-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                  </button>
+                  <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-6 pr-8 text-xs text-neutral-500 leading-relaxed font-medium">
+                      To exchange an item for a different size or color, please contact our concierge team at concierge@sovannstore.com. We will initiate a prepaid return label and hold the exchange item for you until the original arrives at our warehouse.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sizing & Fit -->
+            <div id="sizing" class="scroll-mt-32">
+              <h3 class="font-serif text-2xl font-bold text-neutral-900 border-b-2 border-neutral-900 pb-4 mb-4">
+                Sizing & Fit
+              </h3>
+              <div class="space-y-0">
+                <div class="faq-item border-b border-neutral-200 group">
+                  <button class="accordion-header w-full text-left py-5 flex items-center justify-between text-[11px] sm:text-xs font-bold uppercase tracking-widest text-neutral-900 hover:text-gold-500 focus:outline-none transition-colors [&.active_svg]:rotate-180">
+                    <span>How do I choose the correct size?</span>
+                    <svg class="w-5 h-5 transform transition-transform duration-300 text-neutral-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                  </button>
+                  <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-6 pr-8 text-xs text-neutral-500 leading-relaxed font-medium">
+                      Each product page features a size chart and recommendations based on the item's fit (oversized, tailored, true to size). If you fall between sizes, we recommend sizing up for structured items or checking our detailed fit guides.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Payments & Discounts -->
+            <div id="payments" class="scroll-mt-32">
+              <h3 class="font-serif text-2xl font-bold text-neutral-900 border-b-2 border-neutral-900 pb-4 mb-4">
+                Payments & Discounts
+              </h3>
+              <div class="space-y-0">
+                <div class="faq-item border-b border-neutral-200 group">
+                  <button class="accordion-header w-full text-left py-5 flex items-center justify-between text-[11px] sm:text-xs font-bold uppercase tracking-widest text-neutral-900 hover:text-gold-500 focus:outline-none transition-colors [&.active_svg]:rotate-180">
+                    <span>What payment methods do you accept?</span>
+                    <svg class="w-5 h-5 transform transition-transform duration-300 text-neutral-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                  </button>
+                  <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-6 pr-8 text-xs text-neutral-500 leading-relaxed font-medium">
+                      We accept all major credit cards (Visa, Mastercard, American Express), PayPal, Apple Pay, and Google Pay. All transactions are securely encrypted.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="faq-item border-b border-neutral-200 group">
+                  <button class="accordion-header w-full text-left py-5 flex items-center justify-between text-[11px] sm:text-xs font-bold uppercase tracking-widest text-neutral-900 hover:text-gold-500 focus:outline-none transition-colors [&.active_svg]:rotate-180">
+                    <span>How do I apply a discount code?</span>
+                    <svg class="w-5 h-5 transform transition-transform duration-300 text-neutral-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                  </button>
+                  <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-6 pr-8 text-xs text-neutral-500 leading-relaxed font-medium">
+                      You can enter your discount code at checkout in the 'Promo Code' field. Only one code can be used per order and they cannot be combined with other offers.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Products & Materials -->
+            <div id="products" class="scroll-mt-32">
+              <h3 class="font-serif text-2xl font-bold text-neutral-900 border-b-2 border-neutral-900 pb-4 mb-4">
+                Products & Materials
+              </h3>
+              <div class="space-y-0">
+                <div class="faq-item border-b border-neutral-200 group">
+                  <button class="accordion-header w-full text-left py-5 flex items-center justify-between text-[11px] sm:text-xs font-bold uppercase tracking-widest text-neutral-900 hover:text-gold-500 focus:outline-none transition-colors [&.active_svg]:rotate-180">
+                    <span>How do I care for my garments?</span>
+                    <svg class="w-5 h-5 transform transition-transform duration-300 text-neutral-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                  </button>
+                  <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-6 pr-8 text-xs text-neutral-500 leading-relaxed font-medium">
+                      Each item comes with a specific care label. We generally recommend washing at cold temperatures and air drying to preserve the fabric's integrity and reduce environmental impact.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Sustainability & Sourcing -->
+            <div id="sustainability" class="scroll-mt-32">
+              <h3 class="font-serif text-2xl font-bold text-neutral-900 border-b-2 border-neutral-900 pb-4 mb-4">
+                Sustainability & Sourcing
+              </h3>
+              <div class="space-y-0">
+                <div class="faq-item border-b border-neutral-200 group">
+                  <button class="accordion-header w-full text-left py-5 flex items-center justify-between text-[11px] sm:text-xs font-bold uppercase tracking-widest text-neutral-900 hover:text-gold-500 focus:outline-none transition-colors [&.active_svg]:rotate-180">
+                    <span>Where are your fabrics sourced?</span>
+                    <svg class="w-5 h-5 transform transition-transform duration-300 text-neutral-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                  </button>
+                  <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-6 pr-8 text-xs text-neutral-500 leading-relaxed font-medium">
+                      We work directly with certified mills around the globe. Our organic cotton is certified under GOTS, our linen is sourced from Belgian flax growers, and our cashmeres are hand-combed sustainably in Mongolia.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="faq-item border-b border-neutral-200 group">
+                  <button class="accordion-header w-full text-left py-5 flex items-center justify-between text-[11px] sm:text-xs font-bold uppercase tracking-widest text-neutral-900 hover:text-gold-500 focus:outline-none transition-colors [&.active_svg]:rotate-180">
+                    <span>Are your packaging materials eco-friendly?</span>
+                    <svg class="w-5 h-5 transform transition-transform duration-300 text-neutral-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                  </button>
+                  <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-6 pr-8 text-xs text-neutral-500 leading-relaxed font-medium">
+                      Yes. All SOVANN boxes, garment bags, and tissue wraps are made from 100% recycled fibers, printed with organic soy ink, and are fully compostable or recyclable.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Bar -->
+      <section class="w-full bg-[#FAF9F6] border-t border-neutral-200 py-10 mt-10">
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 divide-y sm:divide-y-0 sm:divide-x divide-neutral-200 text-center">
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 px-4 pt-4 sm:pt-0">
+              <svg class="w-8 h-8 text-neutral-700" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.25v.225c0 .416-.336.75-.75.75h-3a.75.75 0 01-.75-.75V7.5m12 3v4.075c0 .416-.336.75-.75.75H14.25m0-11.25H6.375c-.621 0-1.125.504-1.125 1.125v13.5c0 .621.504 1.125 1.125 1.125M14.25 7.5h2.25M6 10.5h1.5M6 13.5h1.5M6 16.5h1.5" /></svg>
+              <div class="text-center md:text-left">
+                <h4 class="text-xs font-bold text-neutral-950 uppercase tracking-widest">Free Shipping</h4>
+                <p class="text-[11px] text-neutral-500 mt-1">On orders over $150</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 px-4 pt-4 sm:pt-0">
+              <svg class="w-8 h-8 text-neutral-700" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" /></svg>
+              <div class="text-center md:text-left">
+                <h4 class="text-xs font-bold text-neutral-950 uppercase tracking-widest">Easy Returns</h4>
+                <p class="text-[11px] text-neutral-500 mt-1">30-day return policy</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 px-4 pt-4 sm:pt-0">
+              <svg class="w-8 h-8 text-neutral-700" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" /></svg>
+              <div class="text-center md:text-left">
+                <h4 class="text-xs font-bold text-neutral-950 uppercase tracking-widest">Secure Payments</h4>
+                <p class="text-[11px] text-neutral-500 mt-1">100% secure checkout</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 px-4 pt-4 sm:pt-0">
+              <svg class="w-8 h-8 text-neutral-700" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" /></svg>
+              <div class="text-center md:text-left">
+                <h4 class="text-xs font-bold text-neutral-950 uppercase tracking-widest">Customer Support</h4>
+                <p class="text-[11px] text-neutral-500 mt-1">We're here to help</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-neutral-950 text-white border-t border-neutral-900 pt-20 pb-10">
+      <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
+          <div class="lg:col-span-1">
+            <a href="index.html" class="font-serif text-2xl font-bold tracking-[0.2em] uppercase text-white hover:text-gold-500 transition-colors">SOVANN</a>
+            <p class="text-xs text-neutral-400 leading-relaxed mt-6 max-w-sm">
+              Timeless clothing, crafted responsibly.<br/>Designed for a better tomorrow.
+            </p>
+            <div class="flex gap-4 mt-8">
+              <!-- Instagram -->
+              <a href="#" class="text-neutral-400 hover:text-white transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.20 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+              <!-- Facebook -->
+              <a href="#" class="text-neutral-400 hover:text-white transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+              </a>
+              <!-- Pinterest -->
+              <a href="#" class="text-neutral-400 hover:text-white transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.279 1.14c-.038.154-.127.189-.286.115-1.068-.498-1.736-2.064-1.736-3.326 0-2.709 1.968-5.2 5.679-5.2 2.99 0 5.316 2.133 5.316 4.978 0 2.973-1.874 5.367-4.478 5.367-1.121 0-2.176-.582-2.535-1.272l-.689 2.628c-.249.951-.924 2.14-1.378 2.867C9.378 23.824 10.655 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+              </a>
+              <!-- YouTube -->
+              <a href="#" class="text-neutral-400 hover:text-white transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.547 12 3.547 12 3.547s-7.505 0-9.377.503a3.015 3.015 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.503 9.377.503 9.377.503s7.505 0 9.377-.503a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="lg:col-span-1">
+            <h4 class="text-[11px] font-bold uppercase tracking-widest text-white mb-6">SHOP</h4>
+            <ul class="space-y-3.5 text-xs text-neutral-400">
+              <li><a href="#" class="hover:text-white transition-colors">All Products</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">New Arrivals</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Best Sellers</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Sale</a></li>
+            </ul>
+          </div>
+          <div class="lg:col-span-1">
+            <h4 class="text-[11px] font-bold uppercase tracking-widest text-white mb-6">CUSTOMER CARE</h4>
+            <ul class="space-y-3.5 text-xs text-neutral-400">
+              <li><a href="faq.html" class="hover:text-white transition-colors">FAQs</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Shipping Policy</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Return Policy</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Size Guide</a></li>
+            </ul>
+          </div>
+          <div class="lg:col-span-1">
+            <h4 class="text-[11px] font-bold uppercase tracking-widest text-white mb-6">ABOUT</h4>
+            <ul class="space-y-3.5 text-xs text-neutral-400">
+              <li><a href="about.html" class="hover:text-white transition-colors">Our Story</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Sustainability</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Ethical Production</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+            </ul>
+          </div>
+          <div class="lg:col-span-1">
+            <h4 class="text-[11px] font-bold uppercase tracking-widest text-white mb-6">NEWSLETTER</h4>
+            <p class="text-xs text-neutral-400 leading-relaxed mb-4">Be the first to know about new arrivals and exclusive offers.</p>
+            <div class="flex">
+              <input type="email" placeholder="Enter your email" class="w-full bg-neutral-900 border-y border-l border-neutral-800 text-xs px-4 py-3 text-white focus:outline-none focus:border-neutral-700" />
+              <button class="bg-gold-600 hover:bg-gold-500 text-white text-[10px] uppercase font-bold tracking-wider px-5 transition-colors border border-gold-600">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-8 border-t border-neutral-900 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="text-[10px] text-neutral-500 uppercase tracking-widest">
+            &copy; 2026 SOVANN. All rights reserved.
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="px-2 py-1 bg-white rounded flex items-center justify-center h-6 w-10">
+              <span class="text-[8px] font-bold text-[#1434CB] italic">VISA</span>
+            </div>
+            <div class="px-2 py-1 bg-white rounded flex items-center justify-center h-6 w-10">
+              <div class="flex -space-x-1.5">
+                <div class="w-3.5 h-3.5 rounded-full bg-[#EB001B] mix-blend-multiply"></div>
+                <div class="w-3.5 h-3.5 rounded-full bg-[#F79E1B] mix-blend-multiply"></div>
+              </div>
+            </div>
+            <div class="px-2 py-1 bg-white rounded flex items-center justify-center h-6 w-10">
+              <span class="text-[8px] font-bold text-[#00457C] italic">PayPal</span>
+            </div>
+            <div class="px-2 py-1 bg-white rounded flex items-center justify-center h-6 w-10">
+              <span class="text-[8px] font-bold text-black flex items-center gap-0.5">
+                <svg class="w-2.5 h-2.5" viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 24 184.5 10.4 231.4c-20.1 69.5-6.8 174.5 28.5 222.8 17.6 24 38.3 46 63 46 25 0 34.6-14.8 62-14.8 28.1 0 37.6 14.8 62 14.8 24.3 0 45.4-23.8 63-48 18.5-24.8 25.8-49 26-49.8-1.5-1-46.1-17.5-46.2-53.7zM245.9 83.1c13.7-16.7 22.8-39 19.8-63.1-20.9 1-45 12.8-59 29.5-11.8 13.9-22 36.3-18.5 59 22.7 1.8 45.1-9 57.7-25.4z"/></svg>
+                Pay
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

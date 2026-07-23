@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Our Concierge | SOVANN</title>
+    <meta
+      name="description"
+      content="Get in touch with SOVANN's customer care concierge. Store address, phone numbers, opening hours, Google Maps locator, and contact form."
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=32&q=80"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+              serif: ['"Playfair Display"', "serif"],
+            },
+            colors: {
+              gold: {
+                50: "#fdfbeb",
+                100: "#fcf7c7",
+                200: "#f9ee91",
+                300: "#f5df4d",
+                400: "#f0ca22",
+                500: "#d4af37",
+                600: "#bfa030",
+                700: "#8b6f1e",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-white text-neutral-900 min-h-screen flex flex-col font-sans">
+    <div id="page-loader" class="page-loader">
+      <div class="flex flex-col items-center">
+        <div
+          class="w-12 h-12 border-2 border-neutral-200 border-t-neutral-950 rounded-full animate-spin"
+        ></div>
+        <p
+          class="mt-4 text-[10px] uppercase font-bold tracking-widest text-neutral-400"
+        >
+          S O V A N N
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="bg-neutral-950 text-white text-[10px] font-bold tracking-widest py-2.5 px-4 text-center uppercase border-b border-neutral-800"
+    >
+      Free worldwide shipping on orders over $150 &bull; Use code
+      <span class="text-gold-300">SOVANN20</span> for 20% off
+    </div>
+
+    <header
+      id="main-header"
+      class="sticky top-0 w-full z-50 bg-white transition-all duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+      >
+        <button
+          id="mobile-menu-btn"
+          class="lg:hidden text-neutral-800 p-2 focus:outline-none"
+          aria-label="Open mobile menu"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <div class="flex items-center">
+          <a
+            href="index.html"
+            class="font-serif text-2xl font-bold tracking-[0.25em] text-neutral-950 hover:text-gold-500 transition-colors uppercase"
+          >
+            SOVANN
+          </a>
+        </div>
+
+        <nav
+          class="hidden lg:flex items-center space-x-10 text-xs font-bold uppercase tracking-widest"
+        >
+          <a
+            href="index.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors pb-1"
+            >Home</a
+          >
+          <a
+            href="shop.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors pb-1"
+            >Shop</a
+          >
+          <a
+            href="about.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors pb-1"
+            >About Us</a
+          >
+          <a
+            href="contact.html"
+            class="text-neutral-900 border-b-2 border-neutral-900 pb-1"
+            >Contact</a
+          >
+          <a
+            href="faq.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors pb-1"
+            >FAQs</a
+          >
+        </nav>
+
+        <div class="flex items-center space-x-4">
+          <button
+            id="search-trigger-btn"
+            class="p-2 text-neutral-800 hover:text-gold-500 transition-colors relative"
+            aria-label="Search products"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+
+          <a
+            href="shop.html"
+            class="p-2 text-neutral-800 hover:text-gold-500 transition-colors relative"
+            aria-label="Wishlist"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              />
+            </svg>
+            <span
+              class="wishlist-badge-count absolute top-0.5 right-0.5 bg-neutral-900 text-white text-[8px] font-bold w-4.5 h-4.5 rounded-full flex items-center justify-center border border-white hidden"
+              >0</span
+            >
+          </a>
+
+          <a
+            href="cart.html"
+            class="p-2 text-neutral-800 hover:text-gold-500 transition-colors relative"
+            aria-label="Shopping Cart"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+              />
+            </svg>
+            <span
+              class="cart-badge-count absolute top-0.5 right-0.5 bg-gold-500 text-neutral-950 text-[8px] font-bold w-4.5 h-4.5 rounded-full flex items-center justify-center border border-white hidden"
+              >0</span
+            >
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div
+      id="mobile-menu-overlay"
+      class="fixed inset-0 bg-black/40 z-50 hidden transition-opacity"
+    ></div>
+    <div
+      id="mobile-menu-drawer"
+      class="fixed top-0 right-0 bottom-0 w-80 max-w-full bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out p-6 flex flex-col justify-between"
+    >
+      <div>
+        <div
+          class="flex items-center justify-between border-b border-gray-100 pb-4 mb-6"
+        >
+          <span
+            class="font-serif text-lg font-bold tracking-[0.2em] uppercase text-neutral-900"
+            >Navigation</span
+          >
+          <button
+            id="close-mobile-menu"
+            class="p-2 text-neutral-500 hover:text-neutral-900"
+            aria-label="Close menu"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <nav
+          class="flex flex-col space-y-5 text-sm font-bold uppercase tracking-wider"
+        >
+          <a
+            href="index.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors"
+            >Home</a
+          >
+          <a
+            href="shop.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors"
+            >Shop</a
+          >
+          <a
+            href="about.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors"
+            >About Us</a
+          >
+          <a href="contact.html" class="text-neutral-950">Contact</a>
+          <a
+            href="faq.html"
+            class="text-neutral-500 hover:text-neutral-950 transition-colors"
+            >FAQs</a
+          >
+        </nav>
+      </div>
+      <div class="border-t border-gray-100 pt-6">
+        <div
+          class="text-center text-[10px] text-gray-400 uppercase tracking-widest"
+        >
+          &copy; 2026 SOVANN
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="search-overlay"
+      class="fixed inset-0 bg-neutral-950/95 z-[99] hidden items-center justify-center transition-opacity duration-300"
+    >
+      <button
+        id="close-search-btn"
+        class="absolute top-6 right-6 text-white hover:text-gold-500 p-2"
+        aria-label="Close search"
+      >
+        <svg
+          class="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+      <div class="w-full max-w-2xl px-6 text-center">
+        <h3 class="text-white text-xs font-bold uppercase tracking-widest mb-6">
+          Search Our Luxury Collection
+        </h3>
+        <form id="search-overlay-form" class="relative">
+          <input
+            id="search-overlay-input"
+            type="text"
+            placeholder="Type something..."
+            class="w-full bg-transparent border-b-2 border-neutral-700 text-white font-serif text-3xl focus:outline-none focus:border-gold-500 text-center pb-3 tracking-wide"
+          />
+          <button
+            type="submit"
+            class="absolute right-0 bottom-4 text-neutral-400 hover:text-white"
+            aria-label="Submit search"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="mb-12 text-center">
+        <span
+          class="text-xs uppercase font-bold tracking-[0.2em] text-gold-500 block mb-2"
+          >Customer Care</span
+        >
+        <h1 class="text-3xl sm:text-4xl font-serif font-bold text-neutral-950">
+          Get In Touch
+        </h1>
+        <p
+          class="text-sm text-neutral-500 mt-2 max-w-md mx-auto leading-relaxed"
+        >
+          Our concierge team is here to assist you with order inquiries, product
+          details, sizing questions, or custom packaging options.
+        </p>
+      </div>
+
+      <div
+        class="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-12 lg:gap-16 items-start mb-20"
+      >
+        <div
+          class="bg-white border border-gray-100 rounded-3xl p-6 md:p-8 shadow-sm"
+        >
+          <h3
+            class="font-serif text-lg font-bold text-neutral-900 border-b border-gray-100 pb-3 mb-6"
+          >
+            Send Us a Message
+          </h3>
+
+          <form id="contact-us-form" class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label
+                  for="c-name"
+                  class="block text-[10px] uppercase font-bold text-gray-400 mb-1.5"
+                  >Full Name *</label
+                >
+                <input
+                  id="c-name"
+                  type="text"
+                  required
+                  minlength="3"
+                  placeholder="Sophia Mercer"
+                  class="w-full px-4 py-3 bg-neutral-50 border border-gray-100 rounded-xl text-xs focus:outline-none focus:border-neutral-950 focus:bg-white placeholder-gray-400"
+                />
+              </div>
+              <div>
+                <label
+                  for="c-email"
+                  class="block text-[10px] uppercase font-bold text-gray-400 mb-1.5"
+                  >Email Address *</label
+                >
+                <input
+                  id="c-email"
+                  type="email"
+                  required
+                  placeholder="sophia@example.com"
+                  class="w-full px-4 py-3 bg-neutral-50 border border-gray-100 rounded-xl text-xs focus:outline-none focus:border-neutral-950 focus:bg-white placeholder-gray-400"
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                for="c-subject"
+                class="block text-[10px] uppercase font-bold text-gray-400 mb-1.5"
+                >Subject / Topic *</label
+              >
+              <input
+                id="c-subject"
+                type="text"
+                required
+                minlength="4"
+                placeholder="Order Status / Product Inquiry"
+                class="w-full px-4 py-3 bg-neutral-50 border border-gray-100 rounded-xl text-xs focus:outline-none focus:border-neutral-950 focus:bg-white placeholder-gray-400"
+              />
+            </div>
+            <div>
+              <label
+                for="c-message"
+                class="block text-[10px] uppercase font-bold text-gray-400 mb-1.5"
+                >Your Message *</label
+              >
+              <textarea
+                id="c-message"
+                rows="5"
+                required
+                minlength="10"
+                placeholder="Please write details of your question here..."
+                class="w-full px-4 py-3 bg-neutral-50 border border-gray-100 rounded-xl text-xs focus:outline-none focus:border-neutral-950 focus:bg-white placeholder-gray-400"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="px-8 py-3.5 bg-neutral-950 hover:bg-neutral-800 text-white rounded-full text-xs font-bold uppercase tracking-widest transition-luxury shadow-md"
+            >
+              Send Message
+            </button>
+          </form>
+
+          <script>
+            document
+              .getElementById("contact-us-form")
+              ?.addEventListener("submit", function (e) {
+                e.preventDefault();
+                if (typeof showToast === "function") {
+                  showToast(
+                    "Your message has been sent successfully. We will respond within 24 hours.",
+                    "success",
+                  );
+                }
+                this.reset();
+              });
+          </script>
+        </div>
+
+        <div class="space-y-8">
+          <div class="space-y-3">
+            <h4
+              class="text-xs font-bold uppercase tracking-widest text-neutral-900 border-b border-gray-100 pb-2"
+            >
+              The Showroom
+            </h4>
+            <p class="text-sm font-semibold text-neutral-800">
+              SOVANN Flagship Store
+            </p>
+            <p class="text-xs text-neutral-600 leading-relaxed">
+              Vattanac Capital, Level 1,<br />
+              Preah Monivong Blvd, Phnom Penh 12202,<br />
+              Cambodia
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <h4
+              class="text-xs font-bold uppercase tracking-widest text-neutral-900 border-b border-gray-100 pb-2"
+            >
+              Opening Hours
+            </h4>
+            <ul class="text-xs text-neutral-600 space-y-1.5">
+              <li class="flex justify-between">
+                <span>Monday - Friday:</span>
+                <strong class="text-neutral-800 font-semibold"
+                  >10:00 AM - 8:00 PM</strong
+                >
+              </li>
+              <li class="flex justify-between">
+                <span>Saturday:</span>
+                <strong class="text-neutral-800 font-semibold"
+                  >10:00 AM - 6:00 PM</strong
+                >
+              </li>
+              <li class="flex justify-between">
+                <span>Sunday:</span>
+                <strong class="text-neutral-800 font-semibold"
+                  >12:00 PM - 5:00 PM</strong
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-3">
+            <h4
+              class="text-xs font-bold uppercase tracking-widest text-neutral-900 border-b border-gray-100 pb-2"
+            >
+              Quick Contacts
+            </h4>
+            <ul class="text-xs text-neutral-600 space-y-2">
+              <li class="flex items-center gap-2">
+                <svg
+                  class="w-4 h-4 text-gold-500"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <span>+855 23 963 999</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <svg
+                  class="w-4 h-4 text-gold-500"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                <span>concierge@sovannstore.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <section
+        class="w-full aspect-[21/9] md:aspect-[25/9] bg-neutral-100 rounded-3xl overflow-hidden border border-neutral-200/50 shadow-sm mb-10"
+      >
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.7731771146313!2d104.91811801481452!3d11.568112191786523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109513e51f8a851%3A0x946b5d63f25c7980!2sVattanac%20Capital!5e0!3m2!1sen!2skh!4v1700000000000!5m2!1sen!2skh"
+          class="w-full h-full border-0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+    </main>
+
+    <footer
+      class="bg-neutral-950 text-white border-t border-neutral-900 pt-20 pb-10"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16"
+      >
+        <div>
+          <a
+            href="index.html"
+            class="font-serif text-xl font-bold tracking-[0.2em] uppercase text-white hover:text-gold-500 transition-colors"
+            >Sovann</a
+          >
+          <p class="text-xs text-neutral-400 leading-relaxed mt-6 max-w-sm">
+            SOVANN represents the pinnacle of minimal luxury and fine
+            craftsmanship. Every piece in our collection is curated to transcend
+            temporary trends, offering enduring elegance for the modern
+            individual.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="text-xs font-bold uppercase tracking-widest text-white mb-6"
+          >
+            Collections
+          </h4>
+          <ul class="space-y-3.5 text-xs text-neutral-400">
+            <li>
+              <a
+                href="shop.html?gender=women"
+                class="hover:text-white transition-colors"
+                >Women's Collection</a
+              >
+            </li>
+            <li>
+              <a
+                href="shop.html?gender=men"
+                class="hover:text-white transition-colors"
+                >Men's Collection</a
+              >
+            </li>
+            <li>
+              <a
+                href="shop.html?category=Bags"
+                class="hover:text-white transition-colors"
+                >Leather Accessories</a
+              >
+            </li>
+            <li>
+              <a
+                href="shop.html?category=Shoes"
+                class="hover:text-white transition-colors"
+                >Shoes & Sneakers</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-xs font-bold uppercase tracking-widest text-white mb-6"
+          >
+            Customer Service
+          </h4>
+          <ul class="space-y-3.5 text-xs text-neutral-400">
+            <li>
+              <a href="about.html" class="hover:text-white transition-colors"
+                >Our Story</a
+              >
+            </li>
+            <li>
+              <a href="contact.html" class="hover:text-white transition-colors"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a href="faq.html" class="hover:text-white transition-colors"
+                >Help & FAQs</a
+              >
+            </li>
+            <li>
+              <a href="shop.html" class="hover:text-white transition-colors"
+                >Return Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-xs font-bold uppercase tracking-widest text-white mb-6"
+          >
+            Contact & Socials
+          </h4>
+          <ul class="space-y-3.5 text-xs text-neutral-400">
+            <li>
+              Email:
+              <a
+                href="mailto:concierge@sovannstore.com"
+                class="hover:text-white transition-colors"
+                >concierge@sovannstore.com</a
+              >
+            </li>
+            <li>
+              Phone:
+              <a
+                href="tel:+85523963999"
+                class="hover:text-white transition-colors"
+                >+855 23 963 999</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-neutral-900 flex flex-col md:flex-row items-center justify-between text-[10px] text-neutral-500 uppercase tracking-widest gap-4"
+      >
+        <div>&copy; 2026 SOVANN Luxury Store. All rights reserved.</div>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-white transition-colors"
+            >Privacy Policy</a
+          >
+          <a href="#" class="hover:text-white transition-colors"
+            >Terms of Service</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
